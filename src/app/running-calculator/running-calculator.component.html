@@ -5,7 +5,7 @@
         <label for="distance">Distance (Km)</label>
         <input
           formControlName="distance"
-          type="text"
+          type="number"
           class="form-control"
           [ngClass]="{
             'is-valid': speedForm.get('distance').valid,
@@ -28,7 +28,7 @@
             <label for="hours">Hours: </label>
             <input
               formControlName="hours"
-              type="text"
+              type="number"
               class="form-control"
               [ngClass]="{
                 'is-valid': speedForm.get('hours').valid,
@@ -49,7 +49,7 @@
             <label for="minutes">Minutes: </label>
             <input
               formControlName="minutes"
-              type="text"
+              type="number"
               class="form-control"
               [ngClass]="{
                 'is-valid': speedForm.get('minutes').valid,
@@ -71,7 +71,7 @@
             <label for="seconds">Seconds: </label>
             <input
               formControlName="seconds"
-              type="text"
+              type="number"
               class="form-control"
               [ngClass]="{
                 'is-valid': speedForm.get('seconds').valid,
@@ -100,7 +100,7 @@
       </form>
       <label for="speed">Speed (Km/h)</label>
       <input
-        type="text"
+        type="number"
         class="form-control"
         id="speed"
         placeholder="Running speed"
