@@ -21,9 +21,9 @@ export class RunningCalculatorComponent implements OnInit {
   createSpeedForm(): FormGroup {
     return new FormGroup({
       distance: new FormControl(null, [Validators.required, NumberValidator.number]),
-      hours: new FormControl(null, [Validators.required, NumberValidator.number]),
-      minutes: new FormControl(null, [Validators.required, NumberValidator.number]),
-      seconds: new FormControl(null, [Validators.required, NumberValidator.number])
+      hours: new FormControl(null, [NumberValidator.number]),
+      minutes: new FormControl(null, [NumberValidator.number]),
+      seconds: new FormControl(null, [NumberValidator.number])
     })
   }
 

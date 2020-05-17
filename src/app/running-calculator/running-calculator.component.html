@@ -31,7 +31,8 @@
               type="number"
               class="form-control"
               [ngClass]="{
-                'is-valid': speedForm.get('hours').valid,
+                'is-valid':
+                  speedForm.get('hours').dirty && speedForm.get('hours').valid,
                 'is-invalid':
                   speedForm.get('hours').dirty && speedForm.get('hours').invalid
               }"
@@ -41,7 +42,10 @@
             <div *ngIf="speedForm.get('hours').valid" class="valid-feedback">
               Hours correct!
             </div>
-            <div *ngIf="speedForm.get('hours').invalid" class="invalid-feedback">
+            <div
+              *ngIf="speedForm.get('hours').invalid"
+              class="invalid-feedback"
+            >
               Hours incorrect!
             </div>
           </div>
@@ -52,7 +56,9 @@
               type="number"
               class="form-control"
               [ngClass]="{
-                'is-valid': speedForm.get('minutes').valid,
+                'is-valid':
+                  speedForm.get('minutes').dirty &&
+                  speedForm.get('minutes').valid,
                 'is-invalid':
                   speedForm.get('minutes').dirty &&
                   speedForm.get('minutes').invalid
@@ -63,7 +69,10 @@
             <div *ngIf="speedForm.get('minutes').valid" class="valid-feedback">
               Minutes correct!
             </div>
-            <div *ngIf="speedForm.get('minutes').invalid" class="invalid-feedback">
+            <div
+              *ngIf="speedForm.get('minutes').invalid"
+              class="invalid-feedback"
+            >
               Minutes incorrect!
             </div>
           </div>
@@ -74,7 +83,9 @@
               type="number"
               class="form-control"
               [ngClass]="{
-                'is-valid': speedForm.get('seconds').valid,
+                'is-valid':
+                  speedForm.get('seconds').dirty &&
+                  speedForm.get('seconds').valid,
                 'is-invalid':
                   speedForm.get('seconds').dirty &&
                   speedForm.get('seconds').invalid
@@ -85,7 +96,10 @@
             <div *ngIf="speedForm.get('seconds').valid" class="valid-feedback">
               Seconds correct!
             </div>
-            <div *ngIf="speedForm.get('seconds').invalid" class="invalid-feedback">
+            <div
+              *ngIf="speedForm.get('seconds').invalid"
+              class="invalid-feedback"
+            >
               Seconds incorrect!
             </div>
           </div>
