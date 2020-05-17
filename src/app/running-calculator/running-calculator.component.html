@@ -7,6 +7,8 @@
           formControlName="distance"
           type="text"
           class="form-control"
+          [ngClass]="{ 'is-valid': speedForm.get('distance').valid,
+                       'is-invalid': speedForm.get('distance').dirty && speedForm.get('distance').invalid }"
           id="distance"
           placeholder="Enter distance"
         />
@@ -18,6 +20,8 @@
             formControlName="hours"
             type="text"
             class="form-control"
+            [ngClass]="{ 'is-valid': speedForm.get('hours').valid,
+            'is-invalid': speedForm.get('hours').dirty && speedForm.get('hours').invalid }"
             id="hours"
             placeholder="Enter hours"
           />
@@ -28,6 +32,8 @@
             formControlName="minutes"
             type="text"
             class="form-control"
+            [ngClass]="{ 'is-valid': speedForm.get('minutes').valid,
+            'is-invalid': speedForm.get('minutes').dirty && speedForm.get('minutes').invalid }"
             id="minutes"
             placeholder="Enter minutes"
           />
@@ -38,6 +44,8 @@
             formControlName="seconds"
             type="text"
             class="form-control"
+            [ngClass]="{ 'is-valid': speedForm.get('seconds').valid,
+            'is-invalid': speedForm.get('seconds').dirty && speedForm.get('seconds').invalid }"
             id="seconds"
             placeholder="Enter seconds"
           />
