@@ -1,0 +1,65 @@
+<div class="row bg-light mt-5">
+  <div class="col">
+    <div class="form-group">
+      <form [formGroup]="speedForm">
+        <label for="distance">Distance (Km)</label>
+        <input
+          formControlName="distance"
+          type="text"
+          class="form-control"
+          id="distance"
+          placeholder="Enter distance"
+        />
+        <label for="time">Time: </label>
+        <div class="row">
+          <div class="col-4">
+            <label for="hours">Hours: </label>
+            <input
+            formControlName="hours"
+            type="text"
+            class="form-control"
+            id="hours"
+            placeholder="Enter hours"
+          />
+          </div>
+          <div class="col-4">
+            <label for="minutes">Minutes: </label>
+            <input
+            formControlName="minutes"
+            type="text"
+            class="form-control"
+            id="minutes"
+            placeholder="Enter minutes"
+          />
+          </div>
+          <div class="col-4">
+            <label for="seconds">Seconds: </label>
+            <input
+            formControlName="seconds"
+            type="text"
+            class="form-control"
+            id="seconds"
+            placeholder="Enter seconds"
+          />
+          </div>
+        </div>
+        <button
+          [disabled]="!validInput()"
+          class="btn btn-primary btn-block mt-3 mb-3"
+          (click)="calculateSpeed()"
+        >
+          Calculate
+        </button>
+      </form>
+      <label for="speed">Speed (Km/h)</label>
+      <input
+        type="text"
+        class="form-control"
+        id="speed"
+        placeholder="Running speed"
+        [(ngModel)]="speed"
+        (click)="debugForm()"
+      />
+    </div>
+  </div>
+</div>
