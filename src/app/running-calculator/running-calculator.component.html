@@ -7,48 +7,87 @@
           formControlName="distance"
           type="text"
           class="form-control"
-          [ngClass]="{ 'is-valid': speedForm.get('distance').valid,
-                       'is-invalid': speedForm.get('distance').dirty && speedForm.get('distance').invalid }"
+          [ngClass]="{
+            'is-valid': speedForm.get('distance').valid,
+            'is-invalid':
+              speedForm.get('distance').dirty &&
+              speedForm.get('distance').invalid
+          }"
           id="distance"
           placeholder="Enter distance"
         />
+        <div *ngIf="speedForm.get('distance').valid" class="valid-feedback">
+          Distance correct!
+        </div>
+        <div *ngIf="speedForm.get('distance').invalid" class="invalid-feedback">
+          Distance incorrect!
+        </div>
         <label for="time">Time: </label>
         <div class="row">
           <div class="col-4">
             <label for="hours">Hours: </label>
             <input
-            formControlName="hours"
-            type="text"
-            class="form-control"
-            [ngClass]="{ 'is-valid': speedForm.get('hours').valid,
-            'is-invalid': speedForm.get('hours').dirty && speedForm.get('hours').invalid }"
-            id="hours"
-            placeholder="Enter hours"
-          />
+              formControlName="hours"
+              type="text"
+              class="form-control"
+              [ngClass]="{
+                'is-valid': speedForm.get('hours').valid,
+                'is-invalid':
+                  speedForm.get('hours').dirty && speedForm.get('hours').invalid
+              }"
+              id="hours"
+              placeholder="Enter hours"
+            />
+            <div *ngIf="speedForm.get('hours').valid" class="valid-feedback">
+              Hours correct!
+            </div>
+            <div *ngIf="speedForm.get('hours').invalid" class="invalid-feedback">
+              Hours incorrect!
+            </div>
           </div>
           <div class="col-4">
             <label for="minutes">Minutes: </label>
             <input
-            formControlName="minutes"
-            type="text"
-            class="form-control"
-            [ngClass]="{ 'is-valid': speedForm.get('minutes').valid,
-            'is-invalid': speedForm.get('minutes').dirty && speedForm.get('minutes').invalid }"
-            id="minutes"
-            placeholder="Enter minutes"
-          />
+              formControlName="minutes"
+              type="text"
+              class="form-control"
+              [ngClass]="{
+                'is-valid': speedForm.get('minutes').valid,
+                'is-invalid':
+                  speedForm.get('minutes').dirty &&
+                  speedForm.get('minutes').invalid
+              }"
+              id="minutes"
+              placeholder="Enter minutes"
+            />
+            <div *ngIf="speedForm.get('minutes').valid" class="valid-feedback">
+              Minutes correct!
+            </div>
+            <div *ngIf="speedForm.get('minutes').invalid" class="invalid-feedback">
+              Minutes incorrect!
+            </div>
           </div>
           <div class="col-4">
             <label for="seconds">Seconds: </label>
             <input
-            formControlName="seconds"
-            type="text"
-            class="form-control"
-            [ngClass]="{ 'is-valid': speedForm.get('seconds').valid,
-            'is-invalid': speedForm.get('seconds').dirty && speedForm.get('seconds').invalid }"
-            id="seconds"
-            placeholder="Enter seconds"
-          />
+              formControlName="seconds"
+              type="text"
+              class="form-control"
+              [ngClass]="{
+                'is-valid': speedForm.get('seconds').valid,
+                'is-invalid':
+                  speedForm.get('seconds').dirty &&
+                  speedForm.get('seconds').invalid
+              }"
+              id="seconds"
+              placeholder="Enter seconds"
+            />
+            <div *ngIf="speedForm.get('seconds').valid" class="valid-feedback">
+              Seconds correct!
+            </div>
+            <div *ngIf="speedForm.get('seconds').invalid" class="invalid-feedback">
+              Seconds incorrect!
+            </div>
           </div>
         </div>
         <button
@@ -67,7 +106,7 @@
         placeholder="Running speed"
         disabled
         [(ngModel)]="speed"
-        (click)="debugForm()"        
+        (click)="debugForm()"
       />
     </div>
   </div>
