@@ -35,7 +35,7 @@ export class RunningCalculatorComponent implements OnInit {
   }
 
   getTimeInHours(hours: number, minutes: number, seconds: number): number {
-    return (hours + minutes / 60 + seconds / 60 / 60);    
+    return (+(hours) + +(minutes) / 60 + +(seconds)/ 3600);    
   }
 
   validInput(): boolean {
